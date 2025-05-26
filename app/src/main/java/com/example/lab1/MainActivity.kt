@@ -98,5 +98,44 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    // Вариант 1
+    private fun dayOfWeek(n: Int): String = when (n) {
+        1 -> "Понедельник"
+        2 -> "Вторник"
+        3 -> "Среда"
+        4 -> "Четверг"
+        5 -> "Пятница"
+        6 -> "Суббота"
+        7 -> "Воскресенье"
+        else -> "Ошибка: число от 1 до 7"
+    }
 
+    // Вариант 4
+    private fun rightTriangle(code: Char, value: Double): String = when (code.lowercaseChar()) {
+        'к' -> {
+            val h = value * sqrt(2.0)
+            val s = value * value / 2
+            "k=$value ⇒ h=%.2f, S=%.2f".format(h, s)
+        }
+        'h' -> {
+            val k = value / sqrt(2.0)
+            val s = k * k / 2
+            "h=$value ⇒ k=%.2f, S=%.2f".format(k, s)
+        }
+        's' -> {
+            val k = sqrt(2 * value)
+            val h = k * sqrt(2.0)
+            "S=$value ⇒ k=%.2f, h=%.2f".format(k, h)
+        }
+        else -> "Ошибка: неизвестный символ"
+    }
+
+    // Вариант 10
+    private fun meanOfThree(x: Double, y: Double, z: Double, mode: Char): String = when (mode.lowercaseChar()) {
+        'a' -> "Среднее арифметическое: %.2f".format((x + y + z) / 3)
+        'g' -> if (x > 0 && y > 0 && z > 0)
+            "Среднее геометрическое: %.2f".format(cbrt(x * y * z))
+        else "Ошибка: все числа должны быть > 0"
+        else -> "Ошибка: неизвестный режим (a/g)"
+    }
 }
