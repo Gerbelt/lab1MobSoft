@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">lab1</string>
+    <string name="Вычислить">123</string>
+    <string name="_3">Введите число 3 (если нужно)</string>
+    <string name="_2">Введите число 2 (если нужно)</string>
+    <string name="_1">Введите число 1</string>
+    <string name="a_g_h_s">Введите символ (например: a, g, к, h, s)</string>
 </resources>

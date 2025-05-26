@@ -1,47 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:orientation="vertical"
+    android:padding="16dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
     <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="72dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/spinnerTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp" />
 
     <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="wrap_content"
+        android:id="@+id/input1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
+        android:autofillHints=""
+        android:hint="@string/_1"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textColorHint="#546E7A"
+        tools:ignore="VisualLintTextFieldSize" />
+
+    <EditText
+        android:id="@+id/input2"
+        android:autofillHints=""
+        android:hint="@string/_2"
+        android:inputType="numberDecimal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <EditText
+        android:id="@+id/input3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:hint="@string/_3"
+        android:inputType="numberDecimal"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/inputSymbol"
+        android:autofillHints=""
+        android:hint="@string/a_g_h_s"
         android:inputType="text"
-        android:text="Введите значение"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="151dp" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+        android:id="@+id/btnCalculate"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Вычислить"
-        tools:layout_editor_absoluteX="144dp"
-        tools:layout_editor_absoluteY="216dp" />
+        tools:ignore="HardcodedText,VisualLintButtonSize" />
 
     <TextView
-        android:id="@+id/textView1"
-        android:layout_width="118dp"
-        android:layout_height="28dp"
-        android:text="Вывод"
-        tools:layout_editor_absoluteX="127dp"
-        tools:layout_editor_absoluteY="299dp" />
+        android:id="@+id/output"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Результат появится здесь"
+        android:textSize="18sp"
+        android:paddingTop="16dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
